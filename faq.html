@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about Haven & Hue's interior design and home decor services in Stockton, CA.">
+  <title>FAQ - Haven & Hue | Stockton, CA</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .faq-item {
+      background: white;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .faq-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .faq-question:hover {
+      background-color: var(--color-secondary);
+    }
+    .faq-answer {
+      padding: 0 1.5rem 1.5rem;
+      display: none;
+      color: var(--color-muted-foreground);
+    }
+    .faq-answer.show {
+      display: block;
+    }
+    .faq-icon {
+      transition: transform 0.3s;
+    }
+    .faq-icon.rotate {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="primary-text">Haven</span>
+        <span> & </span>
+        <span class="primary-text">Hue</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:209-953-6795" class="phone-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>209-953-6795</span>
+        </a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+        <span id="menuIcon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:209-953-6795" class="phone-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>209-953-6795</span>
+        </a>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Get a Quote</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-bg" style="padding: 4rem 0;">
+      <div class="container text-center">
+        <h1>Frequently Asked Questions</h1>
+        <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto;">Find answers to common questions about our services, pricing, and process</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto;">
+          <h2 style="margin-bottom: 2rem;">General Questions</h2>
+          
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>What areas do you serve?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>We proudly serve Stockton, California and the surrounding areas within a 50-mile radius, including Lodi, Manteca, Tracy, and Modesto. For projects outside this area, please contact us to discuss possibilities.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>How do I get started?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Simply contact us via phone, email, or our contact form to schedule a free consultation. We'll discuss your project, visit your space if needed, and provide a detailed proposal outlining our services and pricing.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Do you offer free consultations?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! We offer a complimentary initial consultation to discuss your project goals, assess your space, and determine how we can best help you. This allows us to provide an accurate proposal with no obligation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>What is your design style?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>We work in all design styles! Whether you prefer modern, traditional, transitional, coastal, farmhouse, or eclectic, we tailor our services to match your personal aesthetic and lifestyle needs.</p>
+            </div>
+          </div>
+
+          <h2 style="margin: 3rem 0 2rem;">Pricing & Budget</h2>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>How much do your services cost?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Our pricing varies depending on the scope of your project, the services required, and the size of your space. After our free consultation, we'll provide a detailed proposal with transparent pricing. We offer packages to fit various budgets.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Do you work with all budgets?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! We believe beautiful design should be accessible to everyone. We'll work within your budget to create a plan that maximizes impact while respecting your financial parameters. We're transparent about costs and will never exceed your budget without prior approval.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Are there any hidden fees?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely not. We provide complete transparency with our pricing. All costs are outlined in our proposal, and we'll never charge additional fees without discussing them with you first.</p>
+            </div>
+          </div>
+
+          <h2 style="margin: 3rem 0 2rem;">Process & Timeline</h2>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>How long does a typical project take?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Project timelines vary based on scope and complexity. A simple styling refresh might take 2-3 weeks, while a complete room makeover could take 4-8 weeks. We'll provide a detailed timeline during the proposal phase and keep you updated throughout the project.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Do I need to move out during the project?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Not at all! Most of our projects are designed to minimize disruption to your daily life. We'll work around your schedule and coordinate installations at convenient times. You can continue living in your home throughout the process.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>What if I don't like something?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Your satisfaction is our top priority. We present concepts and selections for your approval before purchasing or implementing. If something doesn't feel right, we'll work together to find alternatives that better suit your vision.</p>
+            </div>
+          </div>
+
+          <h2 style="margin: 3rem 0 2rem;">Services</h2>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Do you source furniture and decor?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! We have established relationships with furniture and decor suppliers, allowing us to source high-quality pieces at competitive prices. We handle all ordering, delivery coordination, and installation for a seamless experience.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Can you work with my existing furniture?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely! We love incorporating pieces you already own and have sentimental attachment to. We'll assess what works with the new design and suggest strategic additions to complete the look.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Do you offer virtual design services?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we offer virtual consultations and design services for clients who prefer remote assistance or are located outside our primary service area. Contact us to learn more about this option.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container text-center">
+        <h2 style="margin-bottom: 1.5rem;">Still Have Questions?</h2>
+        <p style="font-size: 1.25rem; margin-bottom: 2rem;">We're here to help! Contact us today and we'll be happy to answer any questions.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary" style="background-color: white; color: var(--color-foreground);">Contact Us</a>
+          <a href="tel:209-953-6795" class="btn btn-secondary" style="background-color: transparent; border: 2px solid white; color: white;">Call 209-953-6795</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom: 1rem;">
+            <span class="primary-text">Haven</span>
+            <span> & </span>
+            <span class="primary-text">Hue</span>
+          </div>
+          <p style="color: #d0d0d0; font-size: 0.875rem;">Transform your house into a beautiful haven with our premium home decor and interior styling services.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Our Services</h3>
+          <ul style="color: #d0d0d0; font-size: 0.875rem;">
+            <li>Interior Styling</li>
+            <li>Room Makeovers</li>
+            <li>Color Consultation</li>
+            <li>Furniture Selection</li>
+            <li>Home Staging</li>
+            <li>Seasonal Decor</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <ul style="font-size: 0.875rem;">
+            <li style="color: #d0d0d0; margin-bottom: 1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: top; color: var(--color-primary); margin-right: 0.5rem;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              2280 Maple Avenue<br>
+              Stockton, CA 95204<br>
+              United States
+            </li>
+            <li><a href="tel:209-953-6795">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; color: var(--color-primary); margin-right: 0.5rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              209-953-6795
+            </a></li>
+            <li><a href="mailto:help@heavehue.site">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; color: var(--color-primary); margin-right: 0.5rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              help@heavehue.site
+            </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p style="color: #999; font-size: 0.875rem;">© <span class="copyright-year">2026</span> Haven & Hue. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="terms.html" style="color: #999; font-size: 0.875rem;">Terms & Conditions</a>
+          <a href="privacy.html" style="color: #999; font-size: 0.875rem;">Privacy Policy</a>
+          <a href="disclaimer.html" style="color: #999; font-size: 0.875rem;">Disclaimer</a>
+          <a href="cookies.html" style="color: #999; font-size: 0.875rem;">Cookies Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="container">
+      <div class="cookie-content">
+        <div style="flex: 1;">
+          <p style="font-size: 0.875rem;">We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies. <a href="cookies.html" class="text-primary">Learn more</a></p>
+        </div>
+        <div class="cookie-buttons">
+          <button onclick="declineCookies()" class="btn-outline">Decline</button>
+          <button onclick="acceptCookies()" class="btn btn-primary" style="padding: 0.5rem 1rem;">Accept</button>
+          <button onclick="declineCookies()" class="btn-outline" style="padding: 0.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('.faq-icon');
+      
+      answer.classList.toggle('show');
+      icon.classList.toggle('rotate');
+    }
+  </script>
+</body>
+</html>
